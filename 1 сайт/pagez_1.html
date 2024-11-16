@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Итоговая проектная работа</title>
+	<link rel="stylesheet" href="style/style.css" type="text/css">
+	<link rel="shortcut icon" href="favicon/javascript.png" type="image/png">
+	<script src='clock.js'></script><!--подгружаемый скрипт с часами-->
+	<script type="text/javascript"><!--
+    /* Значение этой цифры определяет скорость печати.
+     Чем меньше цифра, тем выше скорость и наоборот. */
+    var speed = 90;
+
+    /* Эта цифра указывает задержку перехода к
+     другой строке в миллисекундах. Чем больше
+     цифра, тем дольше будет отображаться строка
+     до перехода к другой строке */
+    var pause = 1000;
+
+    var timerID = null;
+    var wireRunning = false;
+    var cc = [];
+
+    /* Ниже впишите то, что будет печататься в
+     окошечке. Как это делать, вы видите. */
+
+    cc[0] = "Хорошая формочка для экономии места!";
+    cc[1] = "Здесь можно расположить любую информацию.";
+    cc[2] = "Ограничений для информации - нет!";
+    cc[3] = "Сколько напишите, столько и будет отображено!";
+    cc[4] = "Размер окошечка можно менять!";
+    cc[5] = "Расположить это окно, можно где угодно!";
+    cc[6] = "То, что надо поместить в <body>...<body>";
+    cc[7] = "Указано в скобках комментария в коде.";
+    cc[8] = "Скобки комментария выглядят вот так:";
+    cc[9] = "<!--Эти слова находятся в скобках коммент.-->";
+    cc[10] = "Сам скрипт надо поместить между тэгами:";
+    cc[11] = " <head>.....</head> ";
+    cc[12] = "Надеемся, вы всё поняли и у вас всё плучится!";
+    cc[13] = " Всего Вам доброго и Удачи!";
+    cc[14] = " Создавайте! Творите! Наслаждайтесь!";
+    cc[15] = "Сейчас будет пустая строка, а затем повтор.";
+    cc[16] = " ";
+    cc[17] = "";
+    cc[18] = "";
+    cc[19] = "";
+    cc[20] = "";
+
+    var currentMessage = 0;
+    var offset = 0;
+    function stopWire() { if (wireRunning)
+        clearTimeout(timerID);
+        wireRunning = false
+    }
+    function startWire() {
+        stopWire();
+        showWire() }
+    function showWire() {
+        var text = cc[currentMessage];
+        if (offset < text.length) { if (text.charAt(offset) == " ")
+            offset++;
+            var partialMessage = text.substring(0, offset + 1);
+            document.wireForm.wireField.value = partialMessage;
+            offset++;
+            timerID = setTimeout("showWire()", speed);
+            wireRunning = true }
+        else {
+            offset = 0;
+            currentMessage++;
+            if (currentMessage == cc.length)
+                currentMessage = 0;
+            timerID = setTimeout("showWire()", pause);
+            wireRunning = true
+        }
+    }
+</script><!--интегрированный скрипт бегущей строки-->
+
+<!-- Таблица стилей CSS для бегущей строки -->
+<style type="text/css">
+    /* Размер, цвет и гарнитура шрифта в форме.
+     Толщина и цвет бордюра окантовки.
+     Отступ слева внутрь формы. */
+    .it { font-size:10px; color:#5692AE;border:#5692AE 1px solid; margin-top: 10px;height: 20px;text-align: center;width: 282px;}
+</style>
+	
+</head>
+
+	<body>
+		<div class="wrapper">
+				<header class="header">
+					<a href="#" class="logo">Основы программирования на <span id="js">Java Script</span></a>
+					<p>Итоговая проектная работа<br> Выполнил: Фамилия_Имя_Дата</p>
+				</header>
+<main class="main">
+	<div class="content">
+			<nav>
+				<ul>
+					<li><a href="#" class="active">Главная страница сайта</a></li>
+					<li><a href="pagez_1.html">Название страницы</a></li>
+					<li><a href="#">Название страницы</a></li>
+					<li><a href="#">Название страницы</a></li>
+					<li><a href="#">Название страницы</a></li>
+				</ul>
+			</nav>
+
+			<figure>
+				<img src="img/js_work.jpg">
+			</figure>
+
+			<section 
+	class="left__side">
+<h3>Заголовок темы страницы</h3>
+					
+<h4 class="q1">Подзаголовок</h4>
+<p>Абзац</p> 
+<p>Абзац</p>
+
+<h4 class="q1">Подзаголовок</h4>
+<p>Абзац</p>
+
+<p>Абзац</p>
+				</section>
+						
+				<section class="right__side">
+					<div class="box">
+                        <h4>Текущее время</h4>
+                        <div class="box2">
+                            <p><canvas id="canvas" height="150" width="150"></canvas></p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h4>Бегущая строка</h4>
+                        <form name="wireForm">
+    <!-- Ваш текст в формочке перед началом печатания -->
+    <input class="it" name="wireField" value=" Здесь надо кликнуть мышкой." size="50" onfocus="if (!wireRunning) { startWire() }" type="text">
+</form><!-- Закончилось все, что касается скрипта! -->
+                    </div>
+					<div class="box">
+						<h4>Дополнительная информация</h4>
+						<p>Текст с дополнительной информацией</p>
+					</div><!-- box -->
+					</section>		
+			</div><!--content -->
+		</main>
+		<footer>
+                <p>Copyright &copy; 2019, designed by <a href="#">WebTemplateOcean.com</a></p>
+        </footer> 
+	</div>
+</body>
+</html>

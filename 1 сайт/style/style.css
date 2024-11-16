@@ -1,0 +1,165 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font:13px "Trebuchet MS",Arial,Helvetica,sans-serif;
+	color:black;
+	background-color: gainsboro;
+}
+a{
+	text-decoration:none;
+	color:#006edc;
+}
+
+ul{
+	list-style:none;
+}
+.wrapper{
+	width:960px;
+	margin:0 auto;
+	padding-bottom:50px;
+}
+.header a.logo{
+	float:left;
+	padding:60px 0 10px 30px;
+	font-size:44px;
+	font-weight:700px;
+	line-height:1em;
+	letter-spacing:1px;
+	color:crimson;
+}
+#js{
+	color: #006edc;
+}
+.header p{
+	float:right;
+	font-size:14px;
+	padding: 5px;
+	line-height:1.2em;
+	color:black;
+	border-left: 2px solid #006edc;
+	border-right: 2px solid #006edc;
+	border-radius: 5px;
+}
+.main{
+	width:100%;
+	background:#fff;
+	overflow:hidden;
+}
+.content{
+	width:928px;
+	margin:0 auto;
+	padding:15px;
+}
+nav ul{
+	display:flex;
+	text-align:center;
+	margin-bottom:15px
+}nav ul li{
+	flex:1;
+}
+nav ul li a{
+	display:block;
+	width:100%;
+	background-color: grey;
+	color:white;
+	text-transform:uppercase;
+	padding:20px 0;
+}
+nav ul li a:hover{
+	background-color: #006edc;
+}
+nav ul li .active{
+	background-color: crimson;
+}
+img{
+	width:100%;
+	height:100%;
+}
+.left__side{
+	float:left;
+	width:570px;
+	padding:10px;
+	text-align:justify;
+}
+.left__side h3{
+	font-size:2.5em;
+	letter-spacing:-1px;
+	color: #5D9EBD;
+}
+.left__side p{
+	padding-top:10px;
+	padding-bottom:10px;
+	line-height:2;
+	font-size: 14px;
+}
+.q1{
+	padding-top: 10px;
+	font-size: 16px;
+}
+.right__side{
+	float:right;
+	width:300px;
+	padding-bottom:20px;
+	padding-top:20px;
+}
+.box{
+	margin-bottom:20px;
+	padding:7px;
+	background:#EFEDE5;
+	border:1px solid #E8E6DE;
+}
+.box a{
+	color: #5692AE;
+}
+.box a:hover{
+	color: brown;
+}
+.box h4{
+	padding-left:15px;
+	font-size:1.3em;
+	line-height:1.5em;
+	color:#FFF;
+	background:#5D9EBD;
+	border:1px solid #5692AE;
+	text-align: center;
+}
+.box p{
+	padding: 10px;
+	text-align: center;
+}
+.box ul{
+	padding:1em;
+}
+.box ul li{
+	line-height:1.5em;
+	border-bottom:1px solid #E8E6DE;
+	padding-top: 4px;
+	list-style-type: circle;
+	color: #5692AE;
+}
+.box2 p{
+	padding:40px;
+	text-align: center;
+}
+footer{
+	text-align:center;
+	padding:30px 15px;
+	background:#fff;
+}
+footer p{
+	background:#5D9EBD;
+	padding:30px 15px;
+}
+footer a{
+	color: white;
+}
+.disc{
+	list-style-type: circle;
+}
+.tab{
+	padding-left: 30px;
+	line-height:2;
+	font-size: 14px;
+}
